@@ -24,7 +24,7 @@
                 return; // Prevents redirection if parameters are missing
             }
 
-            const androidLink = `com.example.magic_auth://auth?email=${email}&token=${token}`;
+            const androidLink = `com.example.magic_auth:?email=${email}&token=${token}`;
             const iosLink = `com.example.magicAuth://auth?email=${email}&token=${token}`;
 
             // Detect platform
