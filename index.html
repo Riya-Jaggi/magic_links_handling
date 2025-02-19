@@ -19,6 +19,11 @@
             const email = getQueryParam('email');
             const token = getQueryParam('token');
 
+            if (!email || !token) {
+                console.warn("Missing email or token. Not redirecting.");
+                return; // Prevents redirection if parameters are missing
+            }
+
             const androidLink = `com.example.magic_auth://auth?email=${email}&token=${token}`;
             const iosLink = `com.example.magicAuth://auth?email=${email}&token=${token}`;
 
